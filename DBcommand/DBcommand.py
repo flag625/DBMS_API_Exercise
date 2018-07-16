@@ -89,7 +89,7 @@ class mysql2pd:
             obj = '*'
         sql = 'select '+obj+' from information_scheme'
         if keyword:
-            sql += "where table_name like %"+keywords+"%"
+            sql += "where table_name like %"+keyword+"%"
         try:
             res = pd.read_sql(sql, self.cxn)
         except Exception as e:
@@ -101,7 +101,7 @@ class mysql2pd:
         从数据库中取出数据放到dataframe中
         :param table: 数据源表
         :param pars: list类型，列出想要提取的字段名，若为空则查询所有字段
-        :param tjs:
+        :param tjs: list类型，列出匹配的条件
         :param blimit: 数据行数最小值限制
         :param elimit: 数据行数最大值限制
         :return: dataframe类型查询结果
@@ -144,8 +144,8 @@ class mysql2pd:
         :param keys: list类型，字段名
         :return: 执行结果
         '''
-        self.cxn = self.pool.connection()
-        self.cursor = self.cxn.cursor()
+        #self.cxn = self.pool.connection()
+        #self.cursor = self.cxn.cursor()
         sql_insert = 'insert into '+table+''
         for i in range(0,len(values)):
             if not str(values[i]).isdigit() and values[i][0] !="'":
@@ -162,8 +162,8 @@ class mysql2pd:
         :param find_dict: where条件对 {'=':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
         :return: 执行结果
         '''
-        self.cxn = self.pool.connection()
-        self.cursor = self.cxn.cursor()
+        #self.cxn = self.pool.connection()
+        #self.cursor = self.cxn.cursor()
         sql = 'delete from '+table
         if find_dict:
             tj = []
@@ -183,8 +183,8 @@ class mysql2pd:
         :param find_dict: where条件对，例如：{'=':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
         :return: 执行结果
         '''
-        self.cxn = self.pool.connection()
-        self.cursor = self.cxn.cursor()
+        #self.cxn = self.pool.connection()
+        #self.cursor = self.cxn.cursor()
         sql = 'update '+table+' set '+','.join(str[k]+'='+str(v) for k,v in keyandvals.items())
         if find_dict:
             tj = []
@@ -203,8 +203,8 @@ class mysql2pd:
         :param pars: 字段属性，例如addtable("`xiaoming`",[("name","varchar(30)","not null"),("sex","varchar(30)"),("age","int(6)")])
         :return: 执行结果
         '''
-        self.cxn = self.pool.connection()
-        self.cursor = self.cxn.cursor()
+        #self.cxn = self.pool.connection()
+        #self.cursor = self.cxn.cursor()
         if table[0] != "`":
             table = "`"+table+"`"
         sql = "create table if not exists "+table+"("+",".join([" ".join(x) for x in pars])\
@@ -224,3 +224,5 @@ class mysql2pd:
             print(e)
         return res
 
+#test
+if __name__ == "__main__":
