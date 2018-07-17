@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be46d646-85a5-4838-a43a-9c3d0b22d52d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DBcommand/DBcommand.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBcommand/DBcommand.py" afterDir="false" />
-    </list>
+    <list default="true" id="be46d646-85a5-4838-a43a-9c3d0b22d52d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
       <file leaf-file-name="DBcommand.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBcommand/DBcommand.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="432">
               <caret line="228" selection-start-line="228" selection-end-line="228" />
               <folding>
                 <element signature="e#45#59#0" expanded="true" />
@@ -148,7 +146,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32874355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32874355" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
@@ -177,7 +175,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DBcommand/DBcommand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="432">
           <caret line="228" selection-start-line="228" selection-end-line="228" />
           <folding>
             <element signature="e#45#59#0" expanded="true" />
