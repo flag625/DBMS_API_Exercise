@@ -224,6 +224,24 @@ class mysql2pd(object):
             print(e)
         return res
 
+class excel2pd(object):
+    def __init__(self, path):
+        #super(mysql2pd,self).__init__()
+        self.excelpath = path
+
+    def __call__(self):
+        if os.path.exists(self.excelpath):
+            if os.path.isfile(self.excelpath):
+                try:
+                    res = pd.read_excel(self.excelpath)
+                except Exception as e:
+                    print(e)
+                    raise e
+                return res
+
+
+
+
 #test
 if __name__ == "__main__":
     test = mysql2pd()
