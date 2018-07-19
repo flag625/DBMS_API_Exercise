@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 import os, time
 
 
-class mysql2pd:
+class mysql2pd(object):
     def __init__(self,host,port,db,user,pwd,retry=3):
         '''
         :param host: 主机号ip
@@ -226,3 +226,4 @@ class mysql2pd:
 
 #test
 if __name__ == "__main__":
+    test = mysql2pd()
